@@ -3,6 +3,11 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <%@ include file="header.jsp" %>
+
+<a href="<c:url value="/dentist/all"/>">Dentist</a>
+<a href="<c:url value="/patient/all"/>">Patient</a>
+<a href="<c:url value="/visit/all"/>">Visit</a>
+<a href="<c:url value="/history/all"/>">History</a>
 <table border="1">
     <thead>
     <th>Dentist Name</th>

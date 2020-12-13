@@ -3,6 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <%@ include file="header.jsp" %>
+
 Visit:<br/>
 <form:form method="post" modelAttribute="visit">
     Dentist: <form:input path="dentNameSur"/>

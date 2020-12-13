@@ -3,19 +3,11 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <%@ include file="header.jsp" %>
+<a href="<c:url value="/dentist/all"/>">Dentist</a>
+<a href="<c:url value="/patient/all"/>">Patient</a>
+<a href="<c:url value="/visit/all"/>">Visit</a>
+<a href="<c:url value="/history/all"/>">History</a>
 
-<div class="container-fluid">
-
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Users</h1>
-        <a href="/user/list" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-            <i class="fas fa-download fa-sm text-white-50"></i>Users list</a>
-    </div>
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Add User</h6>
-        </div>
-        <div class="card-body">
 <table border="1">
     <thead>
     <th>Dentist Name</th>

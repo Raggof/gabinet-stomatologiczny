@@ -1,7 +1,6 @@
 package pl.coderslab.services;
 
 import pl.coderslab.entity.APatient;
-import pl.coderslab.entity.Dentist;
 
 import java.util.List;
 import java.util.Optional;

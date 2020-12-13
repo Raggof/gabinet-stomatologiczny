@@ -20,26 +20,26 @@ public class JpaAPatientService implements APatientService{
 
     @Override
     public List<APatient> getAPatient() {
-        return null;
+        return aPatientRepository.findAll();
     }
 
     @Override
     public void add(APatient aPatient) {
-
+        aPatientRepository.save(aPatient);
     }
 
     @Override
     public Optional<APatient> get(Long id) {
-        return Optional.empty();
+        return aPatientRepository.findById(id);
     }
 
     @Override
     public void delete(Long id) {
-
+        aPatientRepository.deleteById(id);
     }
 
     @Override
     public void update(APatient aPatient) {
-
+        aPatientRepository.save(aPatient);
     }
 }

@@ -9,18 +9,29 @@ public class History {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long dentistID;
-    private Long patientID;
-    private String History;
+    private Long dentId;
+    private Long patId;
+    private String dentName;
+    private String patName;
+    private String data;
+    private String history;
 
     public History() {
     }
 
-    public History(Long id, Long dentistID, Long patientID, String history) {
+    public History(String data, String history) {
+        this.data = data;
+        this.history = history;
+    }
+
+    public History(Long id, Long dentId, Long patId, String dentName, String patName, String data, String history) {
         this.id = id;
-        this.dentistID = dentistID;
-        this.patientID = patientID;
-        History = history;
+        this.dentId = dentId;
+        this.patId = patId;
+        this.dentName = dentName;
+        this.patName = patName;
+        this.data = data;
+        this.history = history;
     }
 
     public Long getId() {
@@ -31,27 +42,57 @@ public class History {
         this.id = id;
     }
 
-    public Long getDentistID() {
-        return dentistID;
+
+    public Long getDentId() {
+        return dentId;
     }
 
-    public void setDentistID(Long dentistID) {
-        this.dentistID = dentistID;
+    public void setDentId(Long dentId) {
+        this.dentId = dentId;
     }
 
-    public Long getPatientID() {
-        return patientID;
+    public Long getPatId() {
+        return patId;
     }
 
-    public void setPatientID(Long patientID) {
-        this.patientID = patientID;
+    public void setPatId(Long patId) {
+        this.patId = patId;
+    }
+
+    public String getDentName() {
+        return dentName;
+    }
+
+    public void setDentName(String dentName) {
+        this.dentName = dentName;
+    }
+
+    public String getPatName() {
+        return patName;
+    }
+
+    public void setPatName(String patName) {
+        this.patName = patName;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 
     public String getHistory() {
-        return History;
+        return history;
     }
 
     public void setHistory(String history) {
-        History = history;
+        this.history = history;
+    }
+
+    @Override
+    public String toString() {
+        return data + ". Historia:" + history;
     }
 }

@@ -25,21 +25,21 @@ public class JpaHistoryService implements HistoryService {
 
     @Override
     public void add(History history) {
-
+        historyRepository.save(history);
     }
 
     @Override
     public Optional<History> get(Long id) {
-        return Optional.empty();
+        return historyRepository.findById(id);
     }
 
     @Override
     public void delete(Long id) {
-
+        historyRepository.deleteById(id);
     }
 
     @Override
     public void update(History history) {
-
+        historyRepository.save(history);
     }
 }

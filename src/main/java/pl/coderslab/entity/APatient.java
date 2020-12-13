@@ -21,9 +21,7 @@ public class APatient {
 
     @Override
     public String toString() {
-        return "APatient= " +
-                "id= " + id +
-                ", nameSurname= " + nameSurname;
+        return nameSurname;
     }
 
     public Long getId() {

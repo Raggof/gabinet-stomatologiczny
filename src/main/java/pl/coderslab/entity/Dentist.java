@@ -48,4 +48,12 @@ public class Dentist {
     public void setNameSurname(String nameSurname) {
         this.nameSurname = nameSurname;
     }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

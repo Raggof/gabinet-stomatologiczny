@@ -25,21 +25,21 @@ public class JpaDentistService implements DentistService{
 
     @Override
     public void add(Dentist dentist) {
-
+        dentistRepository.save(dentist);
     }
 
     @Override
     public Optional<Dentist> get(Long id) {
-        return Optional.empty();
+        return dentistRepository.findById(id);
     }
 
     @Override
     public void delete(Long id) {
-
+        dentistRepository.deleteById(id);
     }
 
     @Override
     public void update(Dentist dentist) {
-
+        dentistRepository.save(dentist);
     }
 }

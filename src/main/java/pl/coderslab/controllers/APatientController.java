@@ -60,7 +60,7 @@ public class APatientController {
     }
 
     @RequestMapping(value = "/edit", method = RequestMethod.POST)
-    public String editAPatient(@Valid APatient aPatient, BindingResult result) {
+    public String editAPatient(BindingResult result, @Valid APatient aPatient) {
         if (result.hasErrors()) {
             return "patient/edit";
         }

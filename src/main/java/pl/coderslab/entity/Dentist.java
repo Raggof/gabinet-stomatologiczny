@@ -3,6 +3,8 @@ package pl.coderslab.entity;
 import org.mindrot.jbcrypt.BCrypt;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 @Entity
 @Table(name = "dentists")
@@ -11,6 +13,8 @@ public class Dentist {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotNull
+    @Pattern(regexp = "^[a-zA-Z -]*", message = "Imię i nazwisko może sie składać tylko z liter i myślnika!")
     private String nameSurname;
     private String password;
 

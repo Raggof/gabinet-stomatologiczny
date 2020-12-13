@@ -1,6 +1,10 @@
 package pl.coderslab.entity;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 @Entity
 @Table(name = "histories")
@@ -9,11 +13,21 @@ public class History {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotNull
     private Long dentId;
+    @NotNull
     private Long patId;
+    @NotNull
+    @Pattern(regexp = "^[a-zA-Z -]*", message = "Imię i nazwisko może sie składać tylko z liter lub myślnika!")
     private String dentName;
+    @NotNull
+    @Pattern(regexp = "^[a-zA-Z -]*", message = "Imię i nazwisko może sie składać tylko z liter lub myślnika!")
     private String patName;
+    @NotNull
+    @Pattern(regexp = "[0-3][0-9][.][0-1][0-9][.][2][0-9][0-9][0-9][ ][\\/][ ][0-2][0-9][:][0-5][0-9]",
+            message = "Wzór: dd.mm.yyyy / hh:mm")
     private String data;
+    @NotNull
     private String history;
 
     public History() {

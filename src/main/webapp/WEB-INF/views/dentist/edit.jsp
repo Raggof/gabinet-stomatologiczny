@@ -1,11 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<html>
-<head>
-    <title>Dentist Edit</title>
-</head>
-<body>
+
+<%@ include file="header.jsp" %>
+
 <c:url var="edit_url" value="/dentist/edit"/>
 <form:form method="post" modelAttribute="dentist" action="${edit_url}">
     <form:hidden path="id"/>
@@ -14,5 +12,4 @@
     <input type="submit" value="Save">
 </form:form>
 
-</body>
-</html>
+<%@ include file="footer.jsp" %>

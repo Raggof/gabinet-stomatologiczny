@@ -1,14 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<html>
-<head>
-    <title>Patient List</title>
-</head>
-<body>
+
+<%@ include file="header.jsp" %>
+
+
 <table border="1">
     <thead>
-    <th>ID</th>
+    <th>Id</th>
     <th>Name and Surname</th>
     </thead>
     <tbody>
@@ -31,5 +30,6 @@ Historia:
     </c:forEach>
     </tbody>
 </table>
-</body>
-</html>
+
+
+<%@ include file="footer.jsp" %>

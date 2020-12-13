@@ -1,15 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<html>
-<head>
-    <title>History add</title>
-</head>
-<body>
+
+<%@ include file="header.jsp" %>
 
 <form:form method="post"
            modelAttribute="history">
-    Dentist Id:<form:input path="dentId"/>
+    Dentist Id:<form:input  path="dentId"/>
     <form:errors path="dentId"/><br/>
     Patient Id:<form:input path="patId"/>
     <form:errors path="patId"/><br/>
@@ -24,5 +21,5 @@
     <input type="submit" value="Save">
 </form:form>
 
-</body>
-</html>
+
+<%@ include file="footer.jsp" %>

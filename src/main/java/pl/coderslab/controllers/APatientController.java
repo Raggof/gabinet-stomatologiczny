@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import pl.coderslab.entity.APatient;
 import pl.coderslab.entity.History;
-import pl.coderslab.repository.APatientRepository;
 import pl.coderslab.repository.HistoryRepository;
 import pl.coderslab.services.APatientService;
 

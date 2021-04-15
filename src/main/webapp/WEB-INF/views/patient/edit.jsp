@@ -4,11 +4,10 @@
 
 <%@ include file="header.jsp" %>
 
-
 <c:url var="edit_url" value="/patient/edit"/>
 <form:form method="post" modelAttribute="patient" action="${edit_url}">
     <form:hidden path="id"/>
-    Name and Surname:<form:input path="nameSurname"/>
+    Name and Surname: <form:input path="nameSurname"/>
     <form:errors path="nameSurname"/><br/>
     <input type="submit" value="Save">
 </form:form>

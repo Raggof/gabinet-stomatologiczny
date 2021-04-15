@@ -29,7 +29,6 @@ public class DentistController {
 
     }
 
-
     @GetMapping("/all")
     public String showDentist(Model model) {
         List<Dentist> dentists = dentistService.getDentists();
